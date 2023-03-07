@@ -1,0 +1,6 @@
+#!/bin/bash
+ping 192.168.100.25 -c 1
+ping 192.168.100.26 -c 1
+ping 192.168.100.27 -c 1
+ping 192.168.100.30 -c 1
+ping www.google.it -c 1
