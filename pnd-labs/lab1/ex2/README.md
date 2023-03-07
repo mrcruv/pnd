@@ -16,6 +16,8 @@ the 2 pcs to request an IP address from it._
 
 - _pc2 should be configured using the dhclient command_
 
+![image](https://user-images.githubusercontent.com/74598295/223479333-bb333bfd-9025-4014-a056-9a54f60042d3.png)
+
 ## R1:
 Before starting the lab, change the "lab.conf" file's line 
 ```
