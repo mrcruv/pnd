@@ -45,20 +45,23 @@ What to change:
 After that we are able to run "udhcpd"
 
 ## PC1: 
-> interfaces setting
-	-just create a file in "/pc1/etc/network/interface" from GUI (do not lstart yet)
-	-the file content is: ```
-				auto eth0
+#### interfaces setting
+
+	- just create a file in "/pc1/etc/network/interface" from GUI (do not lstart yet)
+	- the file content is:
+				`auto eth0
 				allow-hotplug eth0
-				iface eth0 inet dhcp " ```
-	-run "ifup eth0" and pc1 should get its IP
+				iface eth0 inet dhcp `
+				
+	- run "ifup eth0" and pc1 should get its IP
 
 
 ## PC2: 
->dhclient
-	-make sure the dns is the same as the router (through "etc/resolv.conf")
-	-run "dhclient"
-	-this pc should have an ip addr now
+#### dhclient
+
+	- make sure the dns is the same as the router (through "etc/resolv.conf")
+	- run "dhclient"
+	- this pc should have an ip addr now
 
 
 
