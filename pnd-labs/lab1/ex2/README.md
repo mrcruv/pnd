@@ -2,19 +2,19 @@
 _A local lan with 2 pcs, a default gateway that also operates as a DHCP
 server.
 The assignment is: to manually configure r1 to act as DHCP server and
-the 2 pcs to request an IP address from it.
+the 2 pcs to request an IP address from it._
 
-- r1 is set up with the IP address 192.168.100.30/28. It should use
-  the network 192.168.100.16/28 as the address pool
+-_ r1 is set up with the IP address 192.168.100.30/28. It should use
+  the network 192.168.100.16/28 as the address pool_
 
-- the DNS server can be the server used by the host machine (this has
-  to be set in all the pc of the lab)
+- _the DNS server can be the server used by the host machine (this has
+  to be set in all the pc of the lab)_
 
-- the default gateway is r1
+- _the default gateway is r1_
 
-- pc1 should be configured using the interfaces file
+- _pc1 should be configured using the interfaces file_
 
-- pc2 should be configured using the dhclient command_
+- _pc2 should be configured using the dhclient command_
 
 ## R1:
 Before starting the lab, change the "lab.conf" file's line 
