@@ -29,8 +29,7 @@ r1[0] = "lanA"
 YOU HAVE TO CHANGE THE FILE "/etc/udhcpd.conf" in order to make it work.
 What to change:
 
-	```
-	> start		192.168.100.25
+	`> start		192.168.100.25
 
 	> end		192.168.100.29
 
@@ -40,8 +39,8 @@ What to change:
 
 	> option subnet 255.255.255.240
 
-	> option router 192.168.100.30
-	```
+	> option router 192.168.100.30`
+	
 	
 After that we are able to run "udhcpd"
 
