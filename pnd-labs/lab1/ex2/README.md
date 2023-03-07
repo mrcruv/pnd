@@ -51,7 +51,9 @@ After that we are able to run "udhcpd"
 - the file content is:
 				
 	`auto eth0
+	
 	allow-hotplug eth0
+	
 	iface eth0 inet dhcp `
 				
 - run "ifup eth0" and pc1 should get its IP
