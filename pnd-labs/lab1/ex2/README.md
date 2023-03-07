@@ -27,14 +27,22 @@ r1[0] = "lanA"
 ```
 
 YOU HAVE TO CHANGE THE FILE "/etc/udhcpd.conf" in order to make it work.
-What to change:```
-	> start		192.168.100.25
-	> end		192.168.100.29
-	>max_leases 8
-	>opt dns 1.1.1.1
-	> option subnet 255.255.255.240
-	>option router 192.168.100.30
+What to change:
+
 	```
+	> start		192.168.100.25
+
+	> end		192.168.100.29
+
+	> max_leases 8
+
+	> opt dns 1.1.1.1
+
+	> option subnet 255.255.255.240
+
+	> option router 192.168.100.30
+	```
+	
 After that we are able to run "udhcpd"
 
 ## PC1: 
