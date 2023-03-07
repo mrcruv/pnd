@@ -29,7 +29,7 @@ r1[0] = "lanA"
 YOU HAVE TO CHANGE THE FILE "/etc/udhcpd.conf" in order to make it work.
 What to change:
 
-	`> start		192.168.100.25
+	> start		192.168.100.25
 
 	> end		192.168.100.29
 
@@ -47,21 +47,22 @@ After that we are able to run "udhcpd"
 ## PC1: 
 #### interfaces setting
 
-	- just create a file in "/pc1/etc/network/interface" from GUI (do not lstart yet)
-	- the file content is:
-				`auto eth0
-				allow-hotplug eth0
-				iface eth0 inet dhcp `
+- just create a file in "/pc1/etc/network/interface" from GUI (do not lstart yet)
+- the file content is:
 				
-	- run "ifup eth0" and pc1 should get its IP
+	`auto eth0
+	allow-hotplug eth0
+	iface eth0 inet dhcp `
+				
+- run "ifup eth0" and pc1 should get its IP
 
 
 ## PC2: 
 #### dhclient
 
-	- make sure the dns is the same as the router (through "etc/resolv.conf")
-	- run "dhclient"
-	- this pc should have an ip addr now
+- make sure the dns is the same as the router (through "etc/resolv.conf")
+- run "dhclient"
+- this pc should have an ip addr now
 
 
 
