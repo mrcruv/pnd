@@ -1,0 +1,5 @@
+echo 'debconf debconf/frontend select Noninteractive' | debconf-set-selections
+dpkg -i /shared/*.deb
+apt install -yf dnsmasq 
+
+
