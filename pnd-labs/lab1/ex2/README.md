@@ -4,7 +4,7 @@ server.
 The assignment is: to manually configure r1 to act as DHCP server and
 the 2 pcs to request an IP address from it._
 
--_ r1 is set up with the IP address 192.168.100.30/28. It should use
+- _ r1 is set up with the IP address 192.168.100.30/28. It should use
   the network 192.168.100.16/28 as the address pool_
 
 - _the DNS server can be the server used by the host machine (this has
