@@ -1,0 +1,11 @@
+#!/bin/bash
+ping 172.16.0.1 -c 1
+ping 172.16.0.2 -c 1
+ping 172.16.0.6 -c 1
+ping 172.16.0.9 -c 1
+ping 172.16.0.10 -c 1
+ping 172.16.0.14 -c 1
+ping 172.16.0.17 -c 1
+ping 172.16.0.18 -c 1
+ping 172.16.0.22 -c 1
+ping www.google.it -c 1

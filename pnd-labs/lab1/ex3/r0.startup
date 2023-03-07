@@ -1,2 +1,8 @@
 iptables -t nat -A POSTROUTING -o eth1 -j MASQUERADE
 
+ip address add 172.16.0.22/29 dev eth0
+ip route add 172.16.0.0/29 via 172.16.0.17
+ip route add 172.16.0.8/29 via 172.16.0.18
+
+echo "nameserver 1.1.1.1" > /etc/resolv.conf
+echo "nameserver 8.8.8.8" >> /etc/resolv.conf
