@@ -1,0 +1,14 @@
+NB: VM and VM' commands are executed in different terminals.
+
+VM> sudo tcpdump -i enp0s3 -w ftp_capture.pcap
+VM'> fpt test.rebex.net
+	   Name (test.rebex.net:user): demo
+	   Password: password
+VM'> exit
+VM> Ctrl+C
+
+VM> sudo tcpdump -i enp0s3 -w sftp_capture.pcap
+VM'> fpt demo@test.rebex.net
+	   Password: password
+VM'> exit
+VM> Ctrl+C
