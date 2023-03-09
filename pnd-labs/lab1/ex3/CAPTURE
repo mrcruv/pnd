@@ -1,0 +1,20 @@
+# TRAFFIC EXCHANGED FROM LAN1PC1 TO LAN2PC2 CAPTURED FROM LAN2 (R2[ETH1])
+LAN1PC1> ping 172.16.0.10 -c 1
+R2> tcpdump -i eth1 -w shared/lan1pc1_to_lan2pc2_from_lan2.pcap
+R2> Ctrl+C
+
+# TRAFFIC EXCHANGED FROM LAN1PC1 TO LAN2PC2 CAPTURED FROM INTERNAL (R2[ETH0])
+LAN1PC1> ping 172.16.0.10 -c 1
+R2> tcpdump -i eth0 -w shared/lan1pc1_to_lan2pc2_from_internal.pcap
+R2> Ctrl+C
+
+# TRAFFIC EXCHANGED FROM LAN2PC2 TO LAN1PC1 CAPTURED FROM LAN1 (R1[ETH1])
+LAN2PC2> ping 172.16.0.1 -c 1
+R1> tcpdump -i eth1 -w shared/lan2pc2_to_lan1pc1_from_lan1.pcap
+R1> Ctrl+C
+
+# TRAFFIC EXCHANGED FROM LAN2PC2 TO LAN1PC1 CAPTURED FROM INTERNAL (R1[ETH0])
+LAN2PC2> ping 172.16.0.1 -c 1
+R1> tcpdump -i eth0 -w shared/lan2pc2_to_lan1pc1_from_internal.pcap
+R1> Ctrl+C
+
