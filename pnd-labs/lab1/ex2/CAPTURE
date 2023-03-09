@@ -1,0 +1,2 @@
+VM> sudo tcpdump -i any -w shared/dhcp_capture.pcap
+VM> Ctrl+C
