@@ -1,0 +1,10 @@
+R1> openvpn --genkey --secret secret.key
+R1> openssl enc -aes-128-cbc -e -a -in secret.key -out secret.key.enc
+	enter aes-128-cbc encryption password: ...
+	Verifying - enter aes-128-cbc encryption password: ...
+R2> nc -l -p 9000 > secret.key.enc
+R1> nc 100.64.10.2 9000 < secret.key.enc
+R1> Ctrl + C
+R2> openssl enc -aes-128-cbc -d -a -in secret.key.enc -out secret.key
+R1> openvpn --config r1.conf
+R2> openvpn --config r2.conf
