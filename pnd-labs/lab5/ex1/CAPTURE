@@ -1,0 +1,20 @@
+NB: PROPERLY SET THE ROUTES IN R1 AND R2 BEFORE CAPTURING
+R1> tcpdump -i eth0 -w shared/tunneling.pcap
+PC1> ping 192.168.2.100 -c 1
+PC1> Ctrl + C
+R1> Ctrl + C
+
+VM> tcpdump -i any -w shared/no_tunneling.pcap
+PC1> ping 192.168.2.100 -c 1
+PC1> Ctrl + C
+VM> Ctrl + C
+
+R1> tcpdump -i eth0 -w shared/r1_eth0.pcap
+PC1> ping 192.168.2.100 -c 1
+PC1> Ctrl + C
+R1> Ctrl + C
+
+R1> tcpdump -i tun0 -w shared/r1_tun0.pcap
+PC1> ping 192.168.2.100 -c 1
+PC1> Ctrl + C
+R1> Ctrl + C
