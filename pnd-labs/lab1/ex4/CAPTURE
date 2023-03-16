@@ -1,3 +1,5 @@
+VM> ../../connect-lab.sh 10.0.0.2/24 A
+
 VM> sudo tcpdump -i veth0 -w shared/ba_capture.pcap
 LOG IN http://10.0.0.1/ba.php
 VM> Ctrl+C
