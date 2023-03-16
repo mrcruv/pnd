@@ -4,4 +4,3 @@ PC1> apt update
 PC1> apt upgrade
 PC1> apt install php libapache2-mod-php
 PC1> /etc/init.d/apache2 start
-VM> ./connect-lab.sh 10.0.0.2/24 A
