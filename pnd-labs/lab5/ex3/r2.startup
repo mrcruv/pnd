@@ -2,3 +2,7 @@ ip addr add 100.90.0.100/16 dev eth0
 ip route add default via 100.90.0.1
 
 dpkg -i /shared/*.deb
+rm /etc/ipsec-tools.conf
+cp /shared/r2_ipsec-tools.conf /etc/ipsec-tools.conf
+
+/etc/init.d/setkey start

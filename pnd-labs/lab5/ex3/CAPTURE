@@ -1,0 +1,11 @@
+# COMMENT AH COMMANDS AND UNCOMMENT ESP COMMANDS
+# IN shared/r1_ipsec-tools.conf and shared/r2_ipsec-tools.conf
+ISP> tcpdump -i any -w shared/esp_capture.pcap
+R1> ping 100.90.0.100 -c 1
+ISP> Ctrl+C
+
+# COMMENT ESP COMMANDS AND UNCOMMENT AH COMMANDS
+# IN shared/r1_ipsec-tools.conf and shared/r2_ipsec-tools.conf
+ISP> tcpdump -i any -w shared/ah_capture.pcap
+R1> ping 100.90.0.100 -c 1
+ISP> Ctrl+C
