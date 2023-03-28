@@ -1,0 +1,7 @@
+R1> tcpdump -i eth0 -w shared/eth0_capture.pcap
+PC1> ping 192.168.2.100 -c 1
+R1> Ctrl+C
+
+R1> tcpdump -i tun0 -w shared/tun0_capture.pcap
+PC1> ping 192.168.2.100 -c 1
+R1> Ctrl+C

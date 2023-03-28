@@ -1,10 +1,14 @@
 ip address add 100.64.10.1/16 dev eth0
 ip address add 192.168.1.1/24 dev eth1
 
-cp shared/alice.ovpn r1.conf
-cp shared/secret.key .
 chmod o-rwx ./secret.key
+chmod g-rwx ./secret.key
+chmod o-rwx ./server.key
+chmod g-rwx ./server.key
+chmod o-rwx ./ta.key
+chmod g-rwx ./ta.key
 
 dpkg -i /shared/*.deb
 
-openvpn --config r1.conf
+#openvpn --config r1.conf
+#openvpn --config server.conf

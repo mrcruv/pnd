@@ -1,10 +1,14 @@
 ip address add 100.64.10.2/16 dev eth0
 ip address add 192.168.2.1/24 dev eth1
 
-cp shared/bob.ovpn r2.conf
-cp shared/secret.key .
 chmod o-rwx ./secret.key
+chmod g-rwx ./secret.key
+chmod o-rwx ./client.key
+chmod g-rwx ./client.key
+chmod o-rwx ./ta.key
+chmod g-rwx ./ta.key
 
 dpkg -i /shared/*.deb
 
-openvpn --config r2.conf
+#openvpn --config r2.conf
+#openvpn --config client.conf
