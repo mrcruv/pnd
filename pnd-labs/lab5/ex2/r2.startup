@@ -12,3 +12,6 @@ dpkg -i /shared/*.deb
 
 #openvpn --config r2.conf
 #openvpn --config client.conf
+
+cd /shared/OpenVPN/
+openvpn --config client.conf
