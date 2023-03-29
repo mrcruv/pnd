@@ -1,7 +1,18 @@
-R1> tcpdump -i eth0 -w shared/eth0_capture.pcap
+# COMMENT THE "DYNAMIC KEY" openvpn COMMAND AND UNDECOMMENT THE "STATIC KEY" ONE IN r1.startup and r2.startup
+R1> tcpdump -i eth0 -w shared/eth0_sk_capture.pcap
 PC1> ping 192.168.2.100 -c 1
 R1> Ctrl+C
 
-R1> tcpdump -i tun0 -w shared/tun0_capture.pcap
+R1> tcpdump -i tun0 -w shared/tun0_sk_capture.pcap
 PC1> ping 192.168.2.100 -c 1
 R1> Ctrl+C
+
+# COMMENT THE "STATIC KEY" openvpn COMMAND AND UNDECOMMENT THE "DYNAMIC KEY" ONE IN r1.startup and r2.startup
+R1> tcpdump -i eth0 -w shared/eth0_dk_capture.pcap
+PC1> ping 192.168.2.100 -c 1
+R1> Ctrl+C
+
+R1> tcpdump -i tun0 -w shared/tun0_dk_capture.pcap
+PC1> ping 192.168.2.100 -c 1
+R1> Ctrl+C
+
